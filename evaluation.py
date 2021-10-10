@@ -61,13 +61,3 @@ class Evaluation:
         print('acc:{}'.format(acc))
         print('auc:{}'.format(auc))
         print('f1:{}'.format(f1))
-
-if __name__ == "__main__":
-    # embedding_file = "../dataset/aminer/aminer_hhp/HHP_1024_100/result.pkl"
-    # label = '../dataset/aminer/aminer_label_nc.pkl'
-    embedding_file = "../dataset/yelp/yelp_hhp/HHP_4096_5/result.pkl"
-    label = '../dataset/yelp/label_nc.pkl'
-    eval = Evaluation(label, embedding_file)
-    for ratio in [0.2, 0.4, 0.6, 0.8]:
-        eval.lr_classification(ratio)
-    eval.kmeans()
