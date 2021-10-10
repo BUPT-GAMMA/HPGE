@@ -192,11 +192,3 @@ class DataLoader:
         else:
             return [','.join(ids.astype(np.str)[len(ids) - self.nbr_size:]),
                     ','.join(np.array(p).astype(np.str)[len(ids) - self.nbr_size:])]
-#
-# if __name__ == "__main__":
-#     # path = "/home/jiyugang/work2020/HHP/dataset/aminer/"
-#     path = "/home/jyg/work2020/HHP/dataset/aminer/"
-#     filename = path + "graph.csv"
-#     delim = ","
-#     data_loader = DataLoader(path, filename, delim=delim, nbr_size=5, neg_size=5)
-#     data_loader.generate_training_dataset('/home/jyg/work2020/HHP/dataset/aminer/train_test_{}_{}', 10)
